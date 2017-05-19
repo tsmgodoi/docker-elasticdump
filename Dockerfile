@@ -1,6 +1,5 @@
-FROM gliderlabs/alpine:3.1
+FROM node:alpine
 
-RUN apk --update add bash nodejs
-RUN npm install -g elasticdump
+RUN npm install -g elasticdump@3.3.0
 
-ENTRYPOINT ["/usr/bin/elasticdump"]
+ENTRYPOINT ["elasticdump"]
